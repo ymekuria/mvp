@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='musicTonight'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Music Tonight</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+
+    <div class = titleBar>
+      <h1 class = title >Music Tonight</h1>
+    </div>
+      
+    <div class='nav'>
+       <ul>
+         <button class="login">Login</button>
+         <button class ="logout">Logout</button>
+       </ul>
+       
+   </div>
+
+    <div ng-controller = 'concerts'>
+      <div>{{test}}</div> 
+    </div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+
+    <script src="app/app.js"></script>
+  </body>
+</html>
