@@ -1,4 +1,6 @@
-
+body{
+ 
+}
 h1 {
   text-align: center;
 }
@@ -9,7 +11,7 @@ h1 {
   padding-top: 1%; 
   padding-bottom: 1%;
   margin-top: 0;
-  color: #FFFFFF;
+  color: #000000;
   font-family: "Open Sans Condensed",sans-serif;
 }
 
@@ -25,12 +27,19 @@ h1 {
   background-color: #F59B7F; 
 }
 
-.artist, .venue, .date {
+ .venue {
+  display: inline;
   color: #FFFFFF;
 
 }
 
+.date{
+  color: #FFFFFF;
+  padding-left: 3%;
+}
+
 .artist {
+  color: #25313C;
   font-size: 2em;
 }
 
@@ -51,8 +60,16 @@ h1 {
 .leftButton {
   display: block;
   float: right;
+  padding-bottom: 1%;
+  margin-right: 55%;
   height: 7%;
   width: 8%;
+  background-color: #96a9af;
+  color: #FFFFFF; 
+}
+.spinner img {
+    padding-top: 10px;
+    padding-right: 5px;
 }
 
 

@@ -4,11 +4,13 @@ angular.module('musicTonight.listEvents', [])
     $scope.events =[1,2,4];
     $scope.zipcode;
 
-
-    $scope.displayConcerts = function (zipcode) {
+    
+    $scope.displayConcerts = function () {
     Concerts.getConcerts($scope.zipcode)
       .then(function (eventsObj) {
         $scope.events = eventsObj;
+
+
         console.log('scope.events:', $scope.events.events);
       })
       .catch(function (error) {
@@ -16,16 +18,25 @@ angular.module('musicTonight.listEvents', [])
       });
      }; 
 
-    // };
-    
-    // init();  
-
+    // sends the user to a site to buy tickets in a seperate window
     $scope.buyTickets = function(url) {
-      console.log('url',url);
-
       window.open(url);
 
+
+
     };
+
+    $scope.venueMap = function(venue) {
+      console.log('in venue')
+      var venueParse = venue.split(" ");
+      mapUrl = 'https://www.google.com/maps/place/'
+
+      venueParse.forEach(function(str){
+        mapUrl += str+ '+';
+      });
+      console.log('mapUrl', mapUrl);
+      window.open(mapUrl);
+    } 
 
    }); 
 
