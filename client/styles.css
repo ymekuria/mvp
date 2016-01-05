@@ -12,3 +12,24 @@ h1 {
   color: #FFFFFF;
   font-family: "Open Sans Condensed",sans-serif;
 }
+
+.listing {
+  font-family: "Open Sans Condensed",sans-serif;
+  padding: 10% 3%;
+  margin: 2% 0;
+  background-color: #c5e8e4;
+  color: #FFFFFF;
+}
+
+.listing:hover {
+  background-color: #F59B7F; 
+}
+
+.artist, .venue, .date {
+  color: #FFFFFF;
+
+}
+
+.artist {
+  font-size: 2em;
+}

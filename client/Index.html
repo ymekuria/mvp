@@ -20,7 +20,18 @@
    </div>
 
     <div ng-controller = 'listEventsCtrl'>
-      <input ng-module = 'test'/>
+      <div ng-repeat = 'concert in events.events'>
+        <div class = 'listing'>
+          <div class ='artist'>{{concert.title}}</div>
+          <div class ='venue'>{{concert.venue.name}} - {{concert.venue.city}}</div>
+          <div class ='date'> </div> 
+          <button class="Buy">Buy Tickets</button>
+          <button class ="Add to Calender">Add to Calender</button>
+
+        </div>
+
+      </div>
+
       <div>{{test}}</div> 
     </div>
 
