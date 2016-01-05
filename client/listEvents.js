@@ -3,6 +3,7 @@ angular.module('musicTonight.listEvents', [])
     $scope.events = {};
     $scope.events =[1,2,4];
     $scope.zipcode;
+    $scope.calender = [];
 
     
     $scope.displayConcerts = function () {
@@ -27,16 +28,30 @@ angular.module('musicTonight.listEvents', [])
     };
 
     $scope.venueMap = function(venue) {
-      console.log('in venue')
+      console.log('in venue');
       var venueParse = venue.split(" ");
-      mapUrl = 'https://www.google.com/maps/place/'
+      mapUrl = 'https://www.google.com/maps/place/';
 
       venueParse.forEach(function(str){
         mapUrl += str+ '+';
       });
-      console.log('mapUrl', mapUrl);
+     
       window.open(mapUrl);
-    } 
+    }; 
+
+    $scope.addToList = function(artist, venue, date) {
+      console.log('inside addT')
+      var listing = {};
+      listing.artist = artist;
+      listing.venue = venue;
+      listing.date = date;
+      console.log('listing', listing);
+
+      $scope.calender.push(listing);
+    };
+
+
+
 
    }); 
 
