@@ -1,11 +1,12 @@
 angular.module('musicTonight.listEvents', [])
   .controller('listEventsCtrl', function($scope, $location, Concerts){
     $scope.events = {};
-    $scope.eventss =[1,2,4];
+    $scope.events =[1,2,4];
+    $scope.zipcode;
 
 
-    var init = function () {
-    Concerts.getConcerts(94118)
+    $scope.displayConcerts = function (zipcode) {
+    Concerts.getConcerts($scope.zipcode)
       .then(function (eventsObj) {
         $scope.events = eventsObj;
         console.log('scope.events:', $scope.events.events);
@@ -13,13 +14,13 @@ angular.module('musicTonight.listEvents', [])
       .catch(function (error) {
         console.error(error);
       });
+     }; 
 
-
-    };
+    // };
     
-    init();  
+    // init();  
 
-    var buyTickets = function(url) {
+    $scope.buyTickets = function(url) {
       console.log('url',url);
 
       $window.open(url);

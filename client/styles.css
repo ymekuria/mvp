@@ -33,3 +33,22 @@ h1 {
 .artist {
   font-size: 2em;
 }
+
+.zipcode {
+  
+  border:1px solid #97B5D2;
+  color:#25313C;
+  
+  width:98%;
+  font: 2em 'Lucida Grande',Helvetica,Arial,sans-serif;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  outline:0 none;
+  padding:7px;
+}
+
+.submit {
+  width: 10%;
+}
+
+

@@ -7,7 +7,6 @@ angular.module('musicTonight.services', [])
         url: 'http://api.seatgeek.com/2/events?taxonomies.name=concert&postal_code=' + zip
 
       }).then(function(res){
-        //console.log(res.data);
         return res.data;
       });
       
