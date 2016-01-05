@@ -1,12 +1,11 @@
-var app = angular.module('musicTonight', []);
+var app = angular.module('musicTonight', ['musicTonight.services']);
 
-app.controller('concerts', function($scope){
+app.controller('concerts', function($scope,$http){
   $scope.test = 20;
+  $scope.events = $http;
+
+
 })
-.factory('displayShows', function(){
-  
-});
 
 
-// adding routes to the app
 
