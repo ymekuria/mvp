@@ -25,7 +25,8 @@
           <div class ='artist'>{{concert.title}}</div>
           <div class ='venue'>{{concert.venue.name}} - {{concert.venue.city}}</div>
           <div class ='date'> </div> 
-          <button class="Buy">Buy Tickets</button>
+          <div>{{concert.url}}</div>
+          <button class="Buy" ng-click ="buyTickets()" target="_blank">Buy Tickets</button>
           <button class ="Add to Calender">Add to Calender</button>
 
         </div>

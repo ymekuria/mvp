@@ -1,5 +1,5 @@
 angular.module('musicTonight.listEvents', [])
-  .controller('listEventsCtrl', function($scope, Concerts){
+  .controller('listEventsCtrl', function($scope, $location, Concerts){
     $scope.events = {};
     $scope.eventss =[1,2,4];
 
@@ -13,9 +13,18 @@ angular.module('musicTonight.listEvents', [])
       .catch(function (error) {
         console.error(error);
       });
+
+
     };
     
     init();  
+
+    var buyTickets = function(url) {
+      console.log('url',url);
+
+      $window.open(url);
+
+    };
 
    }); 
 
