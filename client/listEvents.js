@@ -1,9 +1,10 @@
 angular.module('musicTonight.listEvents', [])
-  .controller('listEventsCtrl', function($scope, $location, Concerts){
+  .controller('listEventsCtrl', function($scope, $location, Concerts, Calender){
     $scope.events = {};
     $scope.events =[1,2,4];
     $scope.zipcode;
     $scope.calender = [];
+    $scope.listing = {};
 
     
     $scope.displayConcerts = function () {
@@ -41,14 +42,18 @@ angular.module('musicTonight.listEvents', [])
 
     $scope.addToList = function(artist, venue, city, date, address, buyUrl) {
       console.log('inside addT');
-      var listing = {};
-      listing.artist = artist;
-      listing.venue = venue;
-      listing.date = date;
-      console.log('listing', listing);
+     
+      $listing.artist = artist;
+      $listing.venue = venue;
+      $listing.date = date;
+      //console.log('listing', $scope.listing);
 
-      $scope.calender.push(listing);
+      $scope.calender.push($scope.listing);
       console.log('scope.calender', $scope.calender);
+ 
+      // var addListingtoCal = function( $scope.listing) {
+      //   Calender.postToCalender($scope.listing);
+      // }
     };
 
 

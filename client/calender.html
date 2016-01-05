@@ -1,0 +1,10 @@
+   <div ng-repeat='listing in calender' ng-click=''>
+        <div class = 'listing'>
+          <div class='artist'>{{listing.artist}}</div>
+          <span class="spinner" ng-click ='venueMap(listing.address)' target="_blank"><img src="locationIcon.png"></span><div class='venue' href="concert.venue.">{{listing.venue}} - {{listing.city}}</div>
+          <div class ="date"type ="datetime-local">  {{listing.date| date : 'MMM d h:mm'}} pm</div> 
+          
+          <button class="leftButton" ng-click ="buyTickets(listing.buryUrl)" target="_blank">Buy Tickets</button>
+          
+        </div>
+      </div>

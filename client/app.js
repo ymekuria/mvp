@@ -1,16 +1,14 @@
-angular.module('musicTonight', ['musicTonight.services','musicTonight.listEvents', 'ngRoute' ]);
+angular.module('musicTonight', ['musicTonight.services','musicTonight.listEvents', 'ngRoute' ])
   // TODO - add routes here
-  // .config(function ($routeProvider, $httpProvider) {
-  //   $routeProvider
-  //     .when('#/test', {
-  //       templateUrl: 'events.html',
-  //       controller: 'listEventsCtrl'
-  //     })
+  .config(function ($routeProvider) {
+    $routeProvider
+    .when('/', {
+      templateUrl: '/events.html',
+      controller: 'listEventsCtrl'
+    });
       
-  //     .otherwise({
-  //       redirectTo: '/'
-  //     });
+      
   
 
-  // });
+  });
 

@@ -15,3 +15,10 @@ var port = process.env.PORT || 3000;
 
 
 app.listen(port);
+
+//TODO: abstract this out to another file
+//api
+app.post('api/calender', function(req, resp){
+  console.log('req.body in API', req.body);
+  res.end('test');
+});

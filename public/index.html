@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
-Hello World
-  
-</body>
+<!-- old html view -->
+<html ng-app='musicTonight'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Music Tonight</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+
+    <div class = titleBar>
+      <h1 class = title >Music Tonight</h1>
+    </div>
+      
+    <div class='nav'>
+       <!-- <ul>
+         <button class="login">Login</button>
+         <button class ="logout">Logout</button>
+       </ul>
+        -->
+   </div>
+
+    <div ng-controller = 'listEventsCtrl'>
+
+      <form  ng-submit="displayConcerts()">
+        <input class="zipcode" type="text" ng-model="zipcode" name="zipcode" placeholder='Where do you want to have fun? Enter a zipcode' />
+        <input class="submit" type="submit" id="submit" value="Submit" />
+      </form>
+
+      <!-- CalenderView -->
+        <div ng-repeat='listing in calender' ng-click=''>
+        <div class = 'listing'>
+          <div class='artist'>{{listing.artist}}</div>
+          <span class="spinner" ng-click ='venueMap(listing.address)' target="_blank"><img src="locationIcon.png"></span><div class='venue' href="concert.venue.">{{listing.venue}} - {{listing.city}}</div>
+          <div class ="date"type ="datetime-local">  {{listing.date| date : 'MMM d h:mm'}} pm</div> 
+          
+          <button class="leftButton" ng-click ="buyTickets(listing.buryUrl)" target="_blank">Buy Tickets</button>
+          
+        </div>
+      </div>
+
+      <!-- calenderView -->
+      <div ng-repeat='concert in events.events' ng-click=''>
+        <div class = 'listing'>
+          <div class='artist'>{{concert.title}}</div>
+          <span class="spinner" ng-click ='venueMap(concert.venue.address)' target="_blank"><img src="locationIcon.png"></span><div class='venue' href="concert.venue.">{{concert.venue.name}} - {{concert.venue.city}}</div>
+          <div class ="date"type ="datetime-local">  {{concert.datetime_local| date : 'MMM d h:mm'}} pm</div> 
+          
+          <button class="leftButton" ng-click ="buyTickets(concert.url)" target="_blank">Buy Tickets</button>
+          <button class ="leftButton" ng-click ="addToList(concert.title, concert.venue.name, concert.venue.name,concert.datetime_local,concert.venue.address, concert.url )" >To Calender</button>
+        </div>
+      </div>
+    </div> 
+    <!-- end of listEventsCtrl -->
+
+    
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+
+    <script src="listEvents.js"></script>
+    <script src="sevices.js"></script>
+
+    <script src="app.js"></script>
+  </body>
 </html>
