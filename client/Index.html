@@ -25,7 +25,20 @@
         <input class="zipcode" type="text" ng-model="zipcode" name="zipcode" placeholder='Where do you want to have fun? Enter a zipcode' />
         <input class="submit" type="submit" id="submit" value="Submit" />
       </form>
-      
+
+      <!-- CalenderView -->
+        <div ng-repeat='listing in calender' ng-click=''>
+        <div class = 'listing'>
+          <div class='artist'>{{listing.title}}</div>
+          <span class="spinner" ng-click ='venueMap(listing.address)' target="_blank"><img src="locationIcon.png"></span><div class='venue' href="concert.venue.">{{listing.venue}} - {{listing.city}}</div>
+          <div class ="date"type ="datetime-local">  {{listing.date| date : 'MMM d h:mm'}} pm</div> 
+          
+          <button class="leftButton" ng-click ="buyTickets(listing.buryUrl)" target="_blank">Buy Tickets</button>
+          
+        </div>
+      </div>
+
+      <!-- calenderView -->
       <div ng-repeat='concert in events.events' ng-click=''>
         <div class = 'listing'>
           <div class='artist'>{{concert.title}}</div>
@@ -33,7 +46,7 @@
           <div class ="date"type ="datetime-local">  {{concert.datetime_local| date : 'MMM d h:mm'}} pm</div> 
           
           <button class="leftButton" ng-click ="buyTickets(concert.url)" target="_blank">Buy Tickets</button>
-          <button class ="leftButton" ng-click ="addToList(concert.title, concert.venue.name, concert.datetime_local)" >To Calender</button>
+          <button class ="leftButton" ng-click ="addToList(concert.title, concert.venue.name, concert.venue.name,concert.datetime_local,concert.venue.address, concert.url )" >To Calender</button>
         </div>
       </div>
     </div> 

@@ -39,8 +39,8 @@ angular.module('musicTonight.listEvents', [])
       window.open(mapUrl);
     }; 
 
-    $scope.addToList = function(artist, venue, date) {
-      console.log('inside addT')
+    $scope.addToList = function(artist, venue, city, date, address, buyUrl) {
+      console.log('inside addT');
       var listing = {};
       listing.artist = artist;
       listing.venue = venue;
@@ -48,6 +48,7 @@ angular.module('musicTonight.listEvents', [])
       console.log('listing', listing);
 
       $scope.calender.push(listing);
+      console.log('scope.calender', $scope.calender);
     };
 
 
