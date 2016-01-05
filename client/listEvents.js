@@ -23,7 +23,7 @@ angular.module('musicTonight.listEvents', [])
     $scope.buyTickets = function(url) {
       console.log('url',url);
 
-      $window.open(url);
+      window.open(url);
 
     };
 

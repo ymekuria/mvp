@@ -47,8 +47,12 @@ h1 {
   padding:7px;
 }
 
-.submit {
-  width: 10%;
+
+.leftButton {
+  display: block;
+  float: right;
+  height: 7%;
+  width: 8%;
 }
 
 
