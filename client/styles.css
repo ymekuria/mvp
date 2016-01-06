@@ -6,7 +6,7 @@ html, body {
 }
 body{
  background-color: #b7babd;
- background-image: url("concert.png");
+ background-image: url("concert.jpeg");
  background-repeat: no-repeat;
  background-size: cover;
  width: 100%;
@@ -18,8 +18,10 @@ h1 {
   display: inline;
   width: 15%;
   height: 10%;
-  background:#25313C;
+  background:#96a9af;;
   color: #FFFFFF;
+  border-radius: 5px;
+  font-size: .9em;
 }
 .submit {
   display: inline;
@@ -59,12 +61,14 @@ h1 {
  .venue {
   display: inline;
   color: #FFFFFF;
+  font-size: 2em;
 
 }
 
 .date{
   color: #FFFFFF;
   padding-left: 3%;
+  font-size: 1.7em;
 }
 
 .artist {
@@ -93,11 +97,12 @@ h1 {
   float: right;
   margin-bottom: 3px;
   margin-right: 55%;
-  height: 8%;
+  height: 12%;
   width: 10%;
   background-color: #96a9af;
   color: #FFFFFF; 
   border-radius: 5px;
+  font-size: .9em;
 }
 .spinner img {
     padding-top: 10px;
