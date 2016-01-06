@@ -64,6 +64,10 @@ angular.module('musicTonight.listEvents', [])
       $location.path('/calender');
     };
 
+    $scope.logout= function () {
+      $location.path('/events');
+    };
+
 
 
 

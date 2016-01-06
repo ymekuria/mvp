@@ -4,6 +4,7 @@
 </form>
 
 <button class="nav" ng-click ="viewCalender()" target="_blank">View Calender</button>
+<button class="nav" ng-click ="logout()">&nbsp&nbsplogout&nbsp&nbsp</button>
 
 
 <div ng-repeat='concert in events.events' ng-click=''>
@@ -14,6 +15,9 @@
           
           <button class="leftButton" ng-click ="buyTickets(concert.url)" target="_blank">Buy Tickets</button>
           <button class ="leftButton" ng-click ="addToList(concert.title, concert.venue.name, concert.venue.city,concert.datetime_local,concert.venue.address, concert.url)" >To  &nbsp Wishlist</button>
+
+
+
         </div>
       </div>
     </div> 
