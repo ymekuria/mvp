@@ -4,6 +4,9 @@ body{
 h1 {
   text-align: center;
 }
+.nav {
+  display: inline;
+}
 .titleBar {
   background-color: #c5e8e4;
   display: block;
@@ -58,12 +61,13 @@ h1 {
 
 
 .leftButton {
-  display: block;
+  
   float: right;
-  padding-bottom: 1%;
+  margin-bottom: 3px;
   margin-right: 55%;
-  height: 7%;
-  width: 8%;
+  height: 8%;
+  width: 10%
+  %;
   background-color: #96a9af;
   color: #FFFFFF; 
 }

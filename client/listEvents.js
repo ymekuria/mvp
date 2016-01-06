@@ -1,19 +1,17 @@
 angular.module('musicTonight.listEvents', [])
-  .controller('listEventsCtrl', function($scope, $location, Concerts, Calender){
+  .controller('listEventsCtrl', function($rootScope, $scope, $location, Concerts, Calender){
     $scope.events = {};
-    $scope.events =[1,2,4];
+    $rootScope.calender = [];
     $scope.zipcode;
-    $scope.calender = [];
-    $scope.listing = {};
+    $scope.test=
+   
+    
 
     
     $scope.displayConcerts = function () {
     Concerts.getConcerts($scope.zipcode)
       .then(function (eventsObj) {
         $scope.events = eventsObj;
-
-
-        console.log('scope.events:', $scope.events.events);
       })
       .catch(function (error) {
         console.error(error);
@@ -41,25 +39,46 @@ angular.module('musicTonight.listEvents', [])
     }; 
 
     $scope.addToList = function(artist, venue, city, date, address, buyUrl) {
-      console.log('inside addT');
-     
-      $listing.artist = artist;
-      $listing.venue = venue;
-      $listing.date = date;
-      //console.log('listing', $scope.listing);
+      
+      var listing = {};
+      listing.artist = artist;
+      listing.venue = venue;
+      listing.city = city;
+      listing.date = date;
+      listing.address = address;
+      listing.buyUrl = buyUrl;
+      console.log('listing', listing);
 
-      $scope.calender.push($scope.listing);
-      console.log('scope.calender', $scope.calender);
+      $rootScope.calender.push(listing);
+      
+      //$scope.calender.push($scope.listing);
+      console.log('scope.calender', $rootScope.calender);
  
       // var addListingtoCal = function( $scope.listing) {
       //   Calender.postToCalender($scope.listing);
       // }
     };
 
+    $scope.viewCalender= function () {
+      console.log('inside view calender');
+      $location.path('/calender');
+    };
 
 
 
-   }); 
+
+   });
+  // .factory('CalData', function (){
+  //     var calList = $scope.calender;
+  //     return 
+  //     {
+  //       calList: calList
+  //     }
+  //   });
+
+  
+  // });
+     
 
 
 

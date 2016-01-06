@@ -1,7 +1,10 @@
- <form ng-submit="displayConcerts()">
+ <form class="nav" ng-submit="displayConcerts()">
         <input class="zipcode" type="text" ng-model="zipcode" name="zipcode" placeholder='Where do you want to have fun? Enter a zipcode' />
         <input class="submit" type="submit" id="submit" value="Submit" />
-      </form>
+</form>
+
+<button class="nav" ng-click ="viewCalender()" target="_blank">View Calender</button>
+
 
 <div ng-repeat='concert in events.events' ng-click=''>
         <div class = 'listing'>
@@ -10,7 +13,7 @@
           <div class ="date"type ="datetime-local">  {{concert.datetime_local| date : 'MMM d h:mm'}} pm</div> 
           
           <button class="leftButton" ng-click ="buyTickets(concert.url)" target="_blank">Buy Tickets</button>
-          <button class ="leftButton" ng-click ="addToList(concert.title, concert.venue.name, concert.venue.name,concert.datetime_local,concert.venue.address, concert.url )" >To Calender</button>
+          <button class ="leftButton" ng-click ="addToList(concert.title, concert.venue.name, concert.venue.city,concert.datetime_local,concert.venue.address, concert.url)" >To  &nbsp Wishlist</button>
         </div>
       </div>
     </div> 
