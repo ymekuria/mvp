@@ -1,6 +1,10 @@
- <form class="nav" ng-submit="displayConcerts()">
+ <div class = titleBar>
+      <h1 class = title >Music Tonight</h1>
+    </div>
+
+ <form class="submit" ng-submit="displayConcerts()">
         <input class="zipcode" type="text" ng-model="zipcode" name="zipcode" placeholder='Where do you want to have fun? Enter a zipcode' />
-        <input class="submit" type="submit" id="submit" value="Submit" />
+        <input class="nav submit" type="submit" id="submit" value="Submit" />
 </form>
 
 <button class="nav" ng-click ="viewCalender()" target="_blank">View Calender</button>

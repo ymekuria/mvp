@@ -1,18 +1,39 @@
+html, body {
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+
+}
 body{
  background-color: #b7babd;
+ background-image: url("concert.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: 100%;
 }
 h1 {
   text-align: center;
 }
 .nav {
   display: inline;
+  width: 15%;
+  height: 10%;
+  background:#25313C;
+  color: #FFFFFF;
 }
+.submit {
+  display: inline;
+  margin-left: 4%;
+  height: 10%;
+}
+
 .titleBar {
-  background-color: #c5e8e4;
+  
   display: block;
+  font-size: 2em; 
   height: 20%;
   padding-top: 1%; 
-  padding-bottom: 1%;
+  padding-bottom: 0;
   margin-top: 0;
   color: #000000;
   font-family: "Open Sans Condensed",sans-serif;
@@ -22,8 +43,13 @@ h1 {
   font-family: "Open Sans Condensed",sans-serif;
   padding: 10% 3%;
   margin: 2% 0;
+  width: 85%;
   background-color: #c5e8e4;
+  opacity: 0.9;
   color: #FFFFFF;
+  position: center;
+  border-radius: 25px;
+  margin-left: 4%;
 }
 
 .listing:hover {
@@ -48,15 +74,17 @@ h1 {
 
 .zipcode {
   
+  display: block;
   border:1px solid #97B5D2;
   color:#25313C;
-  
-  width:98%;
+  margin-left: 4%;
+  width:88%;
   font: 2em 'Lucida Grande',Helvetica,Arial,sans-serif;
   margin-top: 1%;
   margin-bottom: 1%;
   outline:0 none;
   padding:7px;
+  border-radius: 5px;
 }
 
 
@@ -66,10 +94,10 @@ h1 {
   margin-bottom: 3px;
   margin-right: 55%;
   height: 8%;
-  width: 10%
-  %;
+  width: 10%;
   background-color: #96a9af;
   color: #FFFFFF; 
+  border-radius: 5px;
 }
 .spinner img {
     padding-top: 10px;
